@@ -21,6 +21,7 @@
 
 /* Includes ------------------------------------------------------------------*/
 #include "can.h"
+#include <stdio.h>
 
 CAN_HandleTypeDef hcan1;
 CAN_HandleTypeDef hcan2;
