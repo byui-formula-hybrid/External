@@ -19,6 +19,8 @@
   /* Includes ------------------------------------------------------------------*/
 #include "spi.h"
 
+SPI_HandleTypeDef hspi1;
+
 /**
   * @brief SPI1 Initialization Function
   * @param None

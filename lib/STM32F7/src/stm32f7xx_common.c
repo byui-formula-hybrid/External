@@ -7,6 +7,7 @@
 #include "task.h"
 #include "queue.h"
 #include "stm32f7defs.h"
+#include "stm32f7xx_common.h"
 
 void SystemClock_Config(void) {
   RCC_OscInitTypeDef RCC_OscInitStruct = {0};
