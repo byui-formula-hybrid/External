@@ -44,9 +44,9 @@ void NMI_Handler(void) {
 void HardFault_Handler(void) {
   while (1) {
     // Turns on the red LED on the dev board 
-    // if (HAL_GPIO_ReadPin(GPIOB, LD3_Pin) != GPIO_PIN_SET) {
-    //   HAL_GPIO_WritePin(GPIOB, LD3_Pin, GPIO_PIN_SET);
-    // }
+    if (HAL_GPIO_ReadPin(GPIOB, LD3_Pin) != GPIO_PIN_SET) {
+      HAL_GPIO_WritePin(GPIOB, LD3_Pin, GPIO_PIN_SET);
+    }
   }
 }
 
@@ -55,6 +55,10 @@ void HardFault_Handler(void) {
   */
 void MemManage_Handler(void) {
   while (1) {
+    // Turns on the blue LED on the dev board 
+    if (HAL_GPIO_ReadPin(GPIOB, LD2_Pin) != GPIO_PIN_SET) {
+      HAL_GPIO_WritePin(GPIOB, LD2_Pin, GPIO_PIN_SET);
+    }
   }
 }
 
