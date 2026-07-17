@@ -62,12 +62,8 @@ void MX_CAN1_Init(void) {
       // attempt to initialize hcan2 instead
       Error_Handler();
   }
-  if (HAL_CAN_ActivateNotification(&hcan1, CAN_IT_RX_FIFO0_MSG_PENDING)) {
-      printf("Failed to activate interrupt for hcan1\n");
-      // attempt to initialize hcan2 instead
-      Error_Handler();
-  }
 }
+
 /* CAN2 init function */
 void MX_CAN2_Init(void) {
   // CAN_FilterTypeDef can2Filt;
